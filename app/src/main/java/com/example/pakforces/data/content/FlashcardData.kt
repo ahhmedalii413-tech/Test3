@@ -1,0 +1,152 @@
+package com.example.pakforces.data.content
+
+import com.example.pakforces.data.db.FlashcardEntity
+
+/**
+ * Curated flashcards for the Vocabulary Builder module.
+ * Covers synonyms, antonyms, one-word substitutions, idioms.
+ * Seeded into the DB on first launch of the Flashcards screen.
+ */
+object FlashcardData {
+
+    val all: List<FlashcardEntity> = listOf(
+        // Synonyms
+        FlashcardEntity("syn-abundant", "english", "Abundant", "Plentiful (bohat zyada)"),
+        FlashcardEntity("syn-benign", "english", "Benign", "Kind / gentle (mitha)"),
+        FlashcardEntity("syn-candid", "english", "Candid", "Frank / honest (khulay dil wala)"),
+        FlashcardEntity("syn-diligent", "english", "Diligent", "Hardworking (mehnati)"),
+        FlashcardEntity("syn-enormous", "english", "Enormous", "Huge (bohat bada)"),
+        FlashcardEntity("syn-ferocious", "english", "Ferocious", "Fierce (wehshi)"),
+        FlashcardEntity("syn-garrulous", "english", "Garrulous", "Talkative (ziyada bolne wala)"),
+        FlashcardEntity("syn-hostile", "english", "Hostile", "Unfriendly (dushman)"),
+        FlashcardEntity("syn-imminent", "english", "Imminent", "About to happen (qareeb)"),
+        FlashcardEntity("syn-lethargic", "english", "Lethargic", "Sluggish (sust)"),
+        FlashcardEntity("syn-mundane", "english", "Mundane", "Ordinary (aam)"),
+        FlashcardEntity("syn-novice", "english", "Novice", "Beginner (mubtadi)"),
+        FlashcardEntity("syn-obstinate", "english", "Obstinate", "Stubborn (ziddi)"),
+        FlashcardEntity("syn-placid", "english", "Placid", "Calm (pur-sukoon)"),
+        FlashcardEntity("syn-tenacious", "english", "Tenacious", "Persistent (mazboot iraday wala)"),
+        FlashcardEntity("syn-vivacious", "english", "Vivacious", "Lively (zinda-dil)"),
+
+        // Antonyms
+        FlashcardEntity("ant-ancient", "english", "Ancient ↔ ?", "Modern (jadid)"),
+        FlashcardEntity("ant-barren", "english", "Barren ↔ ?", "Fertile (zarkhaiz)"),
+        FlashcardEntity("ant-conceal", "english", "Conceal ↔ ?", "Reveal (zaahir karna)"),
+        FlashcardEntity("ant-dense", "english", "Dense ↔ ?", "Sparse (patla)"),
+        FlashcardEntity("ant-elevate", "english", "Elevate ↔ ?", "Lower (neeche karna)"),
+        FlashcardEntity("ant-generous", "english", "Generous ↔ ?", "Stingy (kanjoos)"),
+        FlashcardEntity("ant-hasty", "english", "Hasty ↔ ?", "Slow / Cautious (dheere)"),
+        FlashcardEntity("ant-lenient", "english", "Lenient ↔ ?", "Strict (sakht)"),
+        FlashcardEntity("ant-noble", "english", "Noble ↔ ?", "Ignoble (kamina)"),
+        FlashcardEntity("ant-optimist", "english", "Optimist ↔ ?", "Pessimist (maayoos)"),
+        FlashcardEntity("ant-rigid", "english", "Rigid ↔ ?", "Flexible (lachila)"),
+        FlashcardEntity("ant-shallow", "english", "Shallow ↔ ?", "Deep (gehra)"),
+        FlashcardEntity("ant-trivial", "english", "Trivial ↔ ?", "Important (muhim)"),
+
+        // One-word substitutions
+        FlashcardEntity("ow-biography", "english", "Life story of a person written by another", "Biography"),
+        FlashcardEntity("ow-autobiography", "english", "Life story written by oneself", "Autobiography"),
+        FlashcardEntity("ow-centenarian", "english", "A person who is 100+ years old", "Centenarian"),
+        FlashcardEntity("ow-misogynist", "english", "One who hates women", "Misogynist"),
+        FlashcardEntity("ow-philanthropist", "english", "One who loves mankind / donates", "Philanthropist"),
+        FlashcardEntity("ow-omniscient", "english", "One who knows everything", "Omniscient"),
+        FlashcardEntity("ow-omnipotent", "english", "One who has all power", "Omnipotent"),
+        FlashcardEntity("ow-inedible", "english", "Not fit to be eaten", "Inedible"),
+        FlashcardEntity("ow-intolerable", "english", "That cannot be tolerated", "Intolerable"),
+        FlashcardEntity("ow-irreversible", "english", "That cannot be reversed", "Irreversible"),
+
+        // Common confusables
+        FlashcardEntity("cf-accept-except", "english", "Accept vs Except", "Accept = qubool karna; Except = siwaye"),
+        FlashcardEntity("cf-affect-effect", "english", "Affect vs Effect", "Affect = asar dalna (verb); Effect = asar (noun)"),
+        FlashcardEntity("cf-principal-principle", "english", "Principal vs Principle", "Principal = head/mukhya; Principle = usool"),
+        FlashcardEntity("cf-stationary-stationery", "english", "Stationary vs Stationery", "Stationary = ek jagah rukna; Stationery = office samaan"),
+        FlashcardEntity("cf-compliment-complement", "english", "Compliment vs Complement", "Compliment = tareef; Complement = mukammal karna"),
+
+        // Math facts
+        FlashcardEntity("mt-pythagoras", "math", "Pythagoras Theorem", "a² + b² = c² (right triangle)"),
+        FlashcardEntity("mt-area-circle", "math", "Area of Circle", "πr²"),
+        FlashcardEntity("mt-circumference", "math", "Circumference", "2πr"),
+        FlashcardEntity("mt-volume-cube", "math", "Volume of Cube", "a³ (side × side × side)"),
+        FlashcardEntity("mt-area-triangle", "math", "Area of Triangle", "½ × base × height"),
+        FlashcardEntity("mt-square-bigger", "math", "(a+b)²", "a² + 2ab + b²"),
+        FlashcardEntity("mt-square-diff", "math", "(a−b)²", "a² − 2ab + b²"),
+        FlashcardEntity("mt-diff-squares", "math", "a² − b²", "(a+b)(a−b)"),
+        FlashcardEntity("mt-percent", "math", "X% of Y", "(X/100) × Y"),
+        FlashcardEntity("mt-profit-percent", "math", "Profit %", "(Profit / Cost) × 100"),
+        FlashcardEntity("mt-speed", "math", "Speed formula", "Distance / Time"),
+        FlashcardEntity("mt-lcm-hcf", "math", "LCM × HCF", "= Product of two numbers"),
+        FlashcardEntity("mt-simple-interest", "math", "Simple Interest", "(P × R × T) / 100"),
+        FlashcardEntity("mt-compound-interest", "math", "Compound Interest", "P(1+R/100)ⁿ − P"),
+
+        // Islamic Studies
+        FlashcardEntity("is-pillars", "islamic_studies", "5 Pillars of Islam", "Shahada, Salah, Zakat, Sawm, Hajj"),
+        FlashcardEntity("is-surahs", "islamic_studies", "Total Surahs in Quran", "114"),
+        FlashcardEntity("is-first-surah", "islamic_studies", "First Surah", "Al-Fatihah"),
+        FlashcardEntity("is-longest-surah", "islamic_studies", "Longest Surah", "Al-Baqarah (286 verses)"),
+        FlashcardEntity("is-shortest-surah", "islamic_studies", "Shortest Surah", "Al-Kawthar (3 verses)"),
+        FlashcardEntity("is-prophets", "islamic_studies", "Prophets mentioned in Quran", "25"),
+        FlashcardEntity("is-first-prophet", "islamic_studies", "First Prophet", "Hazrat Adam (AS)"),
+        FlashcardEntity("is-last-prophet", "islamic_studies", "Last Prophet", "Hazrat Muhammad (PBUH)"),
+        FlashcardEntity("is-zakat-rate", "islamic_studies", "Zakat rate on cash/gold", "2.5%"),
+        FlashcardEntity("is-fajr-rakats", "islamic_studies", "Fajr Fard rakats", "2"),
+        FlashcardEntity("is-zuhr-rakats", "islamic_studies", "Zuhr Fard rakats", "4"),
+        FlashcardEntity("is-asr-rakats", "islamic_studies", "Asr Fard rakats", "4"),
+        FlashcardEntity("is-maghrib-rakats", "islamic_studies", "Maghrib Fard rakats", "3"),
+        FlashcardEntity("is-isha-rakats", "islamic_studies", "Isha Fard rakats", "4"),
+        FlashcardEntity("is-ghazwa-badr", "islamic_studies", "First Ghazwa", "Badr (2 AH, 313 Muslims)"),
+        FlashcardEntity("is-ghazwa-uhud", "islamic_studies", "Battle of Uhud", "3 AH"),
+        FlashcardEntity("is-ghazwa-khandaq", "islamic_studies", "Battle of Khandaq (Ahzab)", "5 AH"),
+        FlashcardEntity("is-fath-makkah", "islamic_studies", "Conquest of Makkah", "8 AH"),
+        FlashcardEntity("is-ghazwa-tabuk", "islamic_studies", "Last Ghazwa", "Tabuk (9 AH)"),
+        FlashcardEntity("is-quran-revealed", "islamic_studies", "Quran revelation period", "~23 years"),
+
+        // Pakistan Studies
+        FlashcardEntity("pk-founded", "pakistan_studies", "Pakistan founded", "14 August 1947"),
+        FlashcardEntity("pk-first-pm", "pakistan_studies", "First PM of Pakistan", "Liaquat Ali Khan"),
+        FlashcardEntity("pk-first-president", "pakistan_studies", "First President", "Iskander Mirza"),
+        FlashcardEntity("pk-resolution", "pakistan_studies", "Lahore Resolution", "23 March 1940"),
+        FlashcardEntity("pk-resolution-mover", "pakistan_studies", "Lahore Resolution moved by", "A. K. Fazlul Huq"),
+        FlashcardEntity("pk-allahabad", "pakistan_studies", "Allahabad Address", "Allama Iqbal, 1930"),
+        FlashcardEntity("pk-ml-founded", "pakistan_studies", "Muslim League founded", "30 December 1906, Dhaka"),
+        FlashcardEntity("pk-constitution-1956", "pakistan_studies", "First Constitution", "1956"),
+        FlashcardEntity("pk-constitution-1973", "pakistan_studies", "Current Constitution", "1973 (enforced 14 Aug)"),
+        FlashcardEntity("pk-18-amendment", "pakistan_studies", "18th Amendment", "2010 (provincial autonomy)"),
+        FlashcardEntity("pk-25-amendment", "pakistan_studies", "25th Amendment", "2018 (FATA-KPK merger)"),
+        FlashcardEntity("pk-bangladesh", "pakistan_studies", "Bangladesh secession", "1971"),
+        FlashcardEntity("pk-nuclear", "pakistan_studies", "Pakistan became nuclear", "28 May 1998"),
+        FlashcardEntity("pk-capital", "pakistan_studies", "Capital of Pakistan", "Islamabad"),
+        FlashcardEntity("pk-largest-province-area", "pakistan_studies", "Largest province (area)", "Balochistan"),
+        FlashcardEntity("pk-largest-province-pop", "pakistan_studies", "Largest province (population)", "Punjab"),
+        FlashcardEntity("pk-highest-peak", "pakistan_studies", "Second highest peak", "K2 (8,611 m)"),
+        FlashcardEntity("pk-longest-river", "pakistan_studies", "Longest river", "Indus (~3,180 km)"),
+        FlashcardEntity("pk-largest-lake", "pakistan_studies", "Largest lake", "Manchar Lake (Sindh)"),
+        FlashcardEntity("pk-coastline", "pakistan_studies", "Coastline length", "~1,046 km (Arabian Sea)"),
+
+        // General Knowledge
+        FlashcardEntity("gk-largest-country", "general_knowledge", "Largest country (area)", "Russia"),
+        FlashcardEntity("gk-largest-ocean", "general_knowledge", "Largest ocean", "Pacific"),
+        FlashcardEntity("gk-deepest-trench", "general_knowledge", "Deepest ocean trench", "Mariana Trench (~11,000 m)"),
+        FlashcardEntity("gk-longest-river", "general_knowledge", "Longest river (world)", "Nile (~6,650 km)"),
+        FlashcardEntity("gk-highest-mountain", "general_knowledge", "Highest mountain", "Mount Everest (8,849 m)"),
+        FlashcardEntity("gk-un-hq", "general_knowledge", "United Nations HQ", "New York City"),
+        FlashcardEntity("gk-oic-hq", "general_knowledge", "OIC HQ", "Jeddah, Saudi Arabia"),
+        FlashcardEntity("gk-japan-currency", "general_knowledge", "Currency of Japan", "Yen (¥)"),
+        FlashcardEntity("gk-uk-currency", "general_knowledge", "Currency of UK", "Pound Sterling (£)"),
+        FlashcardEntity("gk-chess-origin", "general_knowledge", "Chess originated in", "India (chaturanga)"),
+        FlashcardEntity("gk-olympic-interval", "general_knowledge", "Olympic Games held every", "4 years"),
+        FlashcardEntity("gk-bones-adult", "general_knowledge", "Bones in adult human body", "206"),
+        FlashcardEntity("gk-heart-chambers", "general_knowledge", "Chambers in human heart", "4"),
+        FlashcardEntity("gk-powerhouse-cell", "general_knowledge", "Powerhouse of the cell", "Mitochondria"),
+        FlashcardEntity("gk-water-formula", "general_knowledge", "Chemical formula of water", "H₂O"),
+        FlashcardEntity("gk-gold-symbol", "general_knowledge", "Chemical symbol of gold", "Au"),
+        FlashcardEntity("gk-speed-of-light", "general_knowledge", "Speed of light", "~3 × 10⁸ m/s"),
+        FlashcardEntity("gk-largest-planet", "general_knowledge", "Largest planet (solar system)", "Jupiter"),
+        FlashcardEntity("gk-red-planet", "general_knowledge", "'Red Planet'", "Mars"),
+        FlashcardEntity("gk-pm-current", "general_knowledge", "Current PM of Pakistan (2025)", "Shehbaz Sharif"),
+        FlashcardEntity("gk-president-current", "general_knowledge", "Current President of Pakistan (2025)", "Asif Ali Zardari"),
+        FlashcardEntity("gk-coas-current", "general_knowledge", "Current COAS (2025)", "Gen. Asim Munir"),
+        FlashcardEntity("gk-cas-current", "general_knowledge", "Current CAS (2025)", "ACM Zaheer Ahmad Babar Sidhu"),
+        FlashcardEntity("gk-cns-current", "general_knowledge", "Current CNS (2025)", "Admiral Naveed Ashraf"),
+        FlashcardEntity("gk-cjp-current", "general_knowledge", "Current CJP (2025)", "Justice Yahya Afridi"),
+    )
+}

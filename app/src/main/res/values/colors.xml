@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="army_primary">#5B6E3A</color>
+    <color name="army_secondary">#C9A45B</color>
+    <color name="airforce_primary">#1F4E79</color>
+    <color name="airforce_secondary">#7AB8E0</color>
+    <color name="navy_primary">#0F2E4C</color>
+    <color name="navy_secondary">#E0C088</color>
+    <color name="brand_navy">#0B1F3A</color>
+    <color name="brand_gold">#D4A85A</color>
+</resources>
